@@ -1,3 +1,4 @@
+// function that takes a fraction number to it's lowest form
 function simplify(n, d) {
   if (d === 0) {
     return null;
