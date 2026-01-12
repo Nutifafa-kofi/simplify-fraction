@@ -1,16 +1,18 @@
-function simplify(n, d) {
-  if (d === 0) {
+// function that takes a fraction number to it's lowest form
+function simplifyFraction(numerator, denominator) {
+  if (denominator === 0) {
     return null;
   }
+
   function gcd(a, b) {
     while (b !== 0) {
-      let temp = b;
+      let temporary = b;
       b = a % b;
-      a = temp;
+      a = temporary;
     }
     return a;
   }
-  let divisor = gcd(Math.abs(n), Math.abs(d));
-  return `${n / divisor}/${d / divisor}`;
+  let divisor = gcd(Math.abs(numerator), Math.abs(denominator));
+  return `${numerator / divisor}/${denominator / divisor}`;
 }
-console.log(simplify(8, 12));
+console.log(simplifyFraction(8, 12));
